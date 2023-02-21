@@ -70,7 +70,7 @@ const CreatePost = () => {
         const data = await response.json()
         setForm({ ...form, photo: `data:image/jpeg;base64,${data.photo}` })
       } catch (error) {
-        alert('噗呲，换一个描述再试试吧！')
+        alert('接口异常！')
       } finally {
         setGeneratingImg(false)
       }
